@@ -5,9 +5,16 @@ let operation;
 const displayText = document.querySelector("#displayText");
 const numBtns = document.querySelectorAll(".numBtn");
 
-numBtns.forEach(row => {
-    
+numBtns.forEach(btn => {
+    btn.addEventListener("click", ()=>{
+        if (displayText.textContent.length < 15){
+            displayText.textContent += btn.textContent;
+        } else {
+            displayText.textContent = "Input too long!"
+        }  
+    })
 });
+
 function add(num1, num2) {
     return num1 + num2;
 };
