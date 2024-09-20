@@ -5,18 +5,20 @@
 
 btn {
     display: flex;
-    height: 20vh;
-    width: 20vh;
+    height: 12vh;
+    width: 12vh;
     background-color: lightblue;
     border-radius: 50%;
     align-items: center;
     justify-content: center;
+    font-size: 8vh;
 }
 
 #calcContainer {
     display: flex;
     flex-direction: column;
     height: 100vh;
+    width: 25vw;
     background-color: grey;
     align-items: center;
 }
@@ -24,12 +26,14 @@ btn {
 #display {
     display: flex;
     max-height: 10vh;
-    min-width: 80vh;
+    min-width: 58vh;
     flex: 1;
     background-color: red;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 5vh;
+    margin-top: 1vh;
 }
 
 #btns {
@@ -38,17 +42,29 @@ btn {
     flex: 1;
     background-color: grey;
     align-items: center;
-    justify-content: space-around;
+    gap: 3vh;
 }
 
 #displayText {
     font-size: 10vh;
     margin-left: auto;
-    margin-right: 3vw;
+    margin-right: 2vw;
 }
 
 .btnRow {
     display: flex;
-    width: 50vw;
+    width: 25vw;
     justify-content: center;
+    gap: 1vw;
+}
+
+#btnRow4{
+    justify-content: flex-end;
+    padding-right: 2.1vw;
+    gap: 6.5vw;
+}
+
+#btnEql {
+    width: 21vw;
+    border-radius: 8px;
 }
