@@ -2,6 +2,9 @@ let input1;
 let input2;
 let operation;
 
+const displayText = document.querySelector("#displayText");
+const btns = document.querySelector("#btns");
+
 function add(num1, num2) {
     return num1 + num2;
 };
