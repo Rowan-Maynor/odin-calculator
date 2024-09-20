@@ -5,7 +5,19 @@
 
 #calcContainer {
     display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+#display {
+    display: flex;
+    max-height: 200px;
+    flex: 1;
+    background-color: red;
+}
+
+#buttons {
+    display: flex;
+    flex: 1;
     background-color: grey;
-    height: 600px;
-    width: 500px;
 }
