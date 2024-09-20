@@ -1,6 +1,6 @@
-let input1;
-let input2;
-let operation;
+let input1 = 0;
+let input2 = 0;
+let operation = "none";
 
 const displayText = document.querySelector("#displayText");
 const numBtns = document.querySelectorAll(".numBtn");
@@ -26,35 +26,81 @@ opBtns.forEach(btn => {
     switch(id){
         case "btnAdd":
             btn.addEventListener("click", () => {
-                input1 = displayText.textContent;
-                operation = "add";
-                displayText.textContent = "0";
+                 if(operation == "add" ||
+                    operation == "sub" ||
+                    operation == "mult" ||
+                    operation == "divide"
+                  ){
+                    input2 = displayText.textContent;
+                    input1 = operate(input1, input2, operation);
+                    operation = "add";
+                    displayText.textContent = "0";
+                  } else {
+                    input1 = displayText.textContent;
+                    operation = "add";
+                    displayText.textContent = "0";
+                  }
             });
             break;
         case "btnSub":
             btn.addEventListener("click", () => {
-                input1 = displayText.textContent;
-                operation = "sub";
-                displayText.textContent = "0";
-            });
-            break;
+                if(operation == "add" ||
+                   operation == "sub" ||
+                   operation == "mult" ||
+                   operation == "divide"
+                 ){
+                   input2 = displayText.textContent;
+                   input1 = operate(input1, input2, operation);
+                   operation = "sub";
+                   displayText.textContent = "0";
+                 } else {
+                   input1 = displayText.textContent;
+                   operation = "sub";
+                   displayText.textContent = "0";
+                 }
+           });
+           break;
         case "btnMult":
             btn.addEventListener("click", () => {
-                input1 = displayText.textContent;
-                operation = "mult";
-                displayText.textContent = "0";
-            });
-            break;
+                if(operation == "add" ||
+                   operation == "sub" ||
+                   operation == "mult" ||
+                   operation == "divide"
+                 ){
+                   input2 = displayText.textContent;
+                   input1 = operate(input1, input2, operation);
+                   operation = "mult";
+                   displayText.textContent = "0";
+                 } else {
+                   input1 = displayText.textContent;
+                   operation = "mult";
+                   displayText.textContent = "0";
+                 }
+           });
+           break;
         case "btnDivide":
             btn.addEventListener("click", () => {
-                input1 = displayText.textContent;
-                operation = "divide";
-                displayText.textContent = "0";
-            });
-            break;
+                if(operation == "add" ||
+                   operation == "sub" ||
+                   operation == "mult" ||
+                   operation == "divide"
+                 ){
+                   input2 = displayText.textContent;
+                   input1 = operate(input1, input2, operation);
+                   operation = "divide";
+                   displayText.textContent = "0";
+                 } else {
+                   input1 = displayText.textContent;
+                   operation = "divide";
+                   displayText.textContent = "0";
+                 }
+           });
+           break;
         case "btnClear":
             btn.addEventListener("click", () => {
                 displayText.textContent = "0";
+                input1 = 0;
+                input2 = 0;
                 operation = "clear";
             });
             break;
@@ -67,6 +113,7 @@ opBtns.forEach(btn => {
                 } else {
                     input2 = displayText.textContent;
                     displayText.textContent = operate(input1, input2, operation);
+                    input1 = displayText.textContent;
                     operation = "eqls";
                 }
             });
