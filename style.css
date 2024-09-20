@@ -31,7 +31,7 @@ btn {
     max-height: 10vh;
     width: 45vw;
     flex: 1;
-    background-color: red;
+    background-color: lightblue;
     border-radius: 50px;
     justify-content: center;
     align-items: center;
