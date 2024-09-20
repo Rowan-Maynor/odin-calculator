@@ -12,6 +12,7 @@ btn {
     align-items: center;
     justify-content: center;
     font-size: 8vh;
+    user-select: none;
 }
 
 #calcContainer {
