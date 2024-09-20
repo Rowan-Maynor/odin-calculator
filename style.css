@@ -62,7 +62,7 @@ btn {
 #btnRow4{
     justify-content: flex-end;
     padding-right: 2.1vw;
-    gap: 6.5vw;
+    gap: 1vw;
 }
 
 #btnEql {
