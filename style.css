@@ -72,4 +72,9 @@ btn {
 #btnEql {
     width: 45vw;
     border-radius: 8px;
+    background-color: white;
+}
+
+.opBtn {
+    background-color: rgb(255, 174, 127);
 }
