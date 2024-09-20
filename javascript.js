@@ -12,7 +12,10 @@ numBtns.forEach(btn => {
             displayText.textContent = "Input too long!";
         } else if(displayText.textContent == "0") {
             displayText.textContent = btn.textContent;
-        }  else {
+        } else if(operation == "eqls"){
+            displayText.textContent = btn.textContent;
+            operation = "none";
+        } else {
             displayText.textContent += btn.textContent;
         }
     });
@@ -52,6 +55,7 @@ opBtns.forEach(btn => {
         case "btnClear":
             btn.addEventListener("click", () => {
                 displayText.textContent = "0";
+                operation = "clear";
             });
             break;
         case "btnEql":
@@ -63,6 +67,7 @@ opBtns.forEach(btn => {
                 } else {
                     input2 = displayText.textContent;
                     displayText.textContent = operate(input1, input2, operation);
+                    operation = "eqls";
                 }
             });
             break;
