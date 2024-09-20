@@ -7,7 +7,7 @@ const numBtns = document.querySelectorAll(".numBtn");
 
 numBtns.forEach(btn => {
     btn.addEventListener("click", ()=>{
-        if (displayText.textContent.length < 15){
+        if (displayText.textContent.length < 12){
             displayText.textContent += btn.textContent;
         } else {
             displayText.textContent = "Input too long!"
