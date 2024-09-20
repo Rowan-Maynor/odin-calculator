@@ -10,7 +10,9 @@ numBtns.forEach(btn => {
     btn.addEventListener("click", ()=>{
         if(displayText.textContent.length > 11){
             displayText.textContent = "Input too long!";
-        } else if(displayText.textContent == "0") {
+        } else if(displayText.textContent == "0" || 
+            displayText.textContent == input1
+        ) {
             displayText.textContent = btn.textContent;
         } else if(operation == "eqls"){
             displayText.textContent = btn.textContent;
@@ -26,74 +28,74 @@ opBtns.forEach(btn => {
     switch(id){
         case "btnAdd":
             btn.addEventListener("click", () => {
-                 if(operation == "add" ||
+                if(operation == "add" ||
                     operation == "sub" ||
                     operation == "mult" ||
                     operation == "divide"
-                  ){
+                ){
                     input2 = displayText.textContent;
                     input1 = operate(input1, input2, operation);
+                    displayText.textContent = input1;
                     operation = "add";
-                    displayText.textContent = "0";
-                  } else {
+                } else {
                     input1 = displayText.textContent;
                     operation = "add";
                     displayText.textContent = "0";
-                  }
+                }
             });
             break;
         case "btnSub":
             btn.addEventListener("click", () => {
                 if(operation == "add" ||
-                   operation == "sub" ||
-                   operation == "mult" ||
-                   operation == "divide"
+                    operation == "sub" ||
+                    operation == "mult" ||
+                    operation == "divide"
                  ){
-                   input2 = displayText.textContent;
-                   input1 = operate(input1, input2, operation);
-                   operation = "sub";
-                   displayText.textContent = "0";
-                 } else {
-                   input1 = displayText.textContent;
-                   operation = "sub";
-                   displayText.textContent = "0";
-                 }
+                    input2 = displayText.textContent;
+                    input1 = operate(input1, input2, operation);
+                    displayText.textContent = input1;
+                    operation = "sub";
+                } else {
+                    input1 = displayText.textContent;
+                    operation = "sub";
+                    displayText.textContent = "0";
+                }
            });
            break;
         case "btnMult":
             btn.addEventListener("click", () => {
                 if(operation == "add" ||
-                   operation == "sub" ||
-                   operation == "mult" ||
-                   operation == "divide"
+                    operation == "sub" ||
+                    operation == "mult" ||
+                    operation == "divide"
                  ){
-                   input2 = displayText.textContent;
-                   input1 = operate(input1, input2, operation);
-                   operation = "mult";
-                   displayText.textContent = "0";
-                 } else {
-                   input1 = displayText.textContent;
-                   operation = "mult";
-                   displayText.textContent = "0";
-                 }
+                    input2 = displayText.textContent;
+                    input1 = operate(input1, input2, operation);
+                    displayText.textContent = input1;
+                    operation = "mult";
+                } else {
+                    input1 = displayText.textContent;
+                    operation = "mult";
+                    displayText.textContent = "0";
+                }
            });
            break;
         case "btnDivide":
             btn.addEventListener("click", () => {
                 if(operation == "add" ||
-                   operation == "sub" ||
-                   operation == "mult" ||
-                   operation == "divide"
+                    operation == "sub" ||
+                    operation == "mult" ||
+                    operation == "divide"
                  ){
-                   input2 = displayText.textContent;
-                   input1 = operate(input1, input2, operation);
-                   operation = "divide";
-                   displayText.textContent = "0";
-                 } else {
+                    input2 = displayText.textContent;
+                    input1 = operate(input1, input2, operation);
+                    displayText.textContent = input1;
+                    operation = "divide";
+                } else {
                    input1 = displayText.textContent;
                    operation = "divide";
                    displayText.textContent = "0";
-                 }
+                }
            });
            break;
         case "btnClear":
