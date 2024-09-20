@@ -11,9 +11,7 @@ numBtns.forEach(btn => {
     btn.addEventListener("click", ()=>{
         if(displayText.textContent.length > 11){
             displayText.textContent = "Input too long!";
-        } else if(displayText.textContent == "0" || 
-            displayText.textContent == input1
-        ) {
+        } else if(displayText.textContent == input1) {
             displayText.textContent = btn.textContent;
         } else if(operation == "eqls"){
             displayText.textContent = btn.textContent;
@@ -43,7 +41,6 @@ opBtns.forEach(btn => {
                     input1 = displayText.textContent;
                     operation = "add";
                     prevOperation = "add";
-                    displayText.textContent = "0";
                 }
             });
             break;
@@ -63,7 +60,6 @@ opBtns.forEach(btn => {
                     input1 = displayText.textContent;
                     operation = "sub";
                     prevOperation = "sub";
-                    displayText.textContent = "0";
                 }
            });
            break;
@@ -83,7 +79,6 @@ opBtns.forEach(btn => {
                     input1 = displayText.textContent;
                     operation = "mult";
                     prevOperation = "mult";
-                    displayText.textContent = "0";
                 }
            });
            break;
@@ -103,7 +98,6 @@ opBtns.forEach(btn => {
                    input1 = displayText.textContent;
                    operation = "divide";
                    prevOperation = "divide";
-                   displayText.textContent = "0";
                 }
            });
            break;
