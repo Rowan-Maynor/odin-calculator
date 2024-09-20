@@ -1,6 +1,7 @@
 let input1 = 0;
 let input2 = 0;
 let operation = "none";
+let prevOperation = "none";
 
 const displayText = document.querySelector("#displayText");
 const numBtns = document.querySelectorAll(".numBtn");
@@ -37,9 +38,11 @@ opBtns.forEach(btn => {
                     input1 = operate(input1, input2, operation);
                     displayText.textContent = input1;
                     operation = "add";
+                    prevOperation = "add";
                 } else {
                     input1 = displayText.textContent;
                     operation = "add";
+                    prevOperation = "add";
                     displayText.textContent = "0";
                 }
             });
@@ -55,9 +58,11 @@ opBtns.forEach(btn => {
                     input1 = operate(input1, input2, operation);
                     displayText.textContent = input1;
                     operation = "sub";
+                    prevOperation = "sub";
                 } else {
                     input1 = displayText.textContent;
                     operation = "sub";
+                    prevOperation = "sub";
                     displayText.textContent = "0";
                 }
            });
@@ -73,9 +78,11 @@ opBtns.forEach(btn => {
                     input1 = operate(input1, input2, operation);
                     displayText.textContent = input1;
                     operation = "mult";
+                    prevOperation = "mult";
                 } else {
                     input1 = displayText.textContent;
                     operation = "mult";
+                    prevOperation = "mult";
                     displayText.textContent = "0";
                 }
            });
@@ -91,9 +98,11 @@ opBtns.forEach(btn => {
                     input1 = operate(input1, input2, operation);
                     displayText.textContent = input1;
                     operation = "divide";
+                    prevOperation = "divide";
                 } else {
                    input1 = displayText.textContent;
                    operation = "divide";
+                   prevOperation = "divide";
                    displayText.textContent = "0";
                 }
            });
@@ -104,6 +113,7 @@ opBtns.forEach(btn => {
                 input1 = 0;
                 input2 = 0;
                 operation = "clear";
+                prevOperation = "clear";
             });
             break;
         case "btnEql":
@@ -112,7 +122,11 @@ opBtns.forEach(btn => {
                     console.log("No input");
                 } else if (operation == undefined) {
                     console.log("No Operation");
-                } else {
+                } else if (operation == "eqls"){
+                    displayText.textContent = operate(input1, input2, prevOperation);
+                    input1 = displayText.textContent;
+                } 
+                else {
                     input2 = displayText.textContent;
                     displayText.textContent = operate(input1, input2, operation);
                     input1 = displayText.textContent;
