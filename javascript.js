@@ -3,8 +3,11 @@ let input2;
 let operation;
 
 const displayText = document.querySelector("#displayText");
-const btns = document.querySelector("#btns");
+const numBtns = document.querySelectorAll(".numBtn");
 
+numBtns.forEach(row => {
+    
+});
 function add(num1, num2) {
     return num1 + num2;
 };
