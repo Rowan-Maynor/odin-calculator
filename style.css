@@ -13,6 +13,7 @@ btn {
     justify-content: center;
     font-size: 8vh;
     user-select: none;
+    transition: background-color 0.4s, color 0.4s;
 }
 
 btn:hover {
